@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+    <style type="text/css">
+        *{
+            padding: 5px;
+        }
+        
+        #container-1{
+            background-color: red;
+            height: 150px;
+            width: 600px;
+        }
+        .heading{
+            text-align: center;
+            color: white;
+        }
+        #container{
+            margin: 150px 350px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div id="container">
+        <div id="container-1">
+        <h1 class="heading">My To Do List</h1>
+        <div>
+            <input id="titleBar" class="titleBar" type="text" placeholder="Title..." size="70">
+            <button id="addButton" type="button"  style="width: 70px" >Add</button>
+        </div>
+        </div>
+        <ul id="container-2">
+            <li>Hit the gym</li>
+            <li>Pay bills</li>
+            <li>Meet George</li>
+            <li>Buy eggs</li>
+        </ul>>
+        
+    </div>
+
+    <script type="text/javascript">
+       //create a new list item when clicking on the add button
+       function newElement()
+       {
+          var content = document.createElement("content")
+          var inputValue = document.getElementById("titleBar").value
+          var t= document.createTextNode(inputValue)
+
+          content.appendChild(t)
+          if (inputValue=='')
+          {
+            alert("You must write something")
+          }
+          else{
+            document.getElementById("container-2").appendChild(content);
+          }
+          //doubt cleared : calling the function
+          document.getElementById("titleBar").value=""
+          
+
+
+       }
+       
+
+    </script>
+</body>
+</html>
